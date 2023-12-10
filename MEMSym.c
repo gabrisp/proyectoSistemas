@@ -57,7 +57,7 @@ int main() {
             printf("T: %d, Acierto de CACHE, ADDR %04X Label %X linea %02X palabra %02X DATO %02X\n",
                    globaltime, addr, tbl[linea].ETQ, linea, palabra, tbl[linea].Data[palabra]);
             int j = (globaltime++)-(numfallos * 20);
-            texto[j++] = tbl[linea].Data[palabra];
+            texto[j] = tbl[linea].Data[palabra];
         }
         VolcarCACHE(tbl);
         sleep(1);
